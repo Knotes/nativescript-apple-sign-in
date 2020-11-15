@@ -10,7 +10,7 @@ import jsArrayToNSArray = iOSUtils.collections.jsArrayToNSArray;
 import nsArrayToJSArray = iOSUtils.collections.nsArrayToJSArray;
 
 let controller: any /* ASAuthorizationController */;
-let delegate: ASAuthorizationControllerDelegateImpl;
+export let delegate: ASAuthorizationControllerDelegateImpl;
 
 declare const ASAuthorizationAppleIDProvider,
   ASAuthorizationController,
@@ -59,8 +59,8 @@ export function getSignInWithAppleState(
         // this prolly means a state was added so we need to add it to the plugin
         reject(
           "Invalid state for getSignInWithAppleState: " +
-            state +
-            ", please report an issue at he plugin repo!"
+          state +
+          ", please report an issue at he plugin repo!"
         );
       }
     });
